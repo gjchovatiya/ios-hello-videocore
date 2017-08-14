@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E821B0832F998851A10B5FA3 /* Pods_HelloVideoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B720B6805981BE4E3918D160 /* Pods_HelloVideoCore.framework */; };
+		F5EAC9E01F41C18500A9CB3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAC9DF1F41C18500A9CB3E /* AppDelegate.swift */; };
+		F5EAC9E21F41C18500A9CB3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAC9E11F41C18500A9CB3E /* ViewController.swift */; };
+		F5EAC9E51F41C18500A9CB3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EAC9E31F41C18500A9CB3E /* Main.storyboard */; };
+		F5EAC9E71F41C18500A9CB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EAC9E61F41C18500A9CB3E /* Assets.xcassets */; };
+		F5EAC9EA1F41C18500A9CB3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EAC9E81F41C18500A9CB3E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12693162E6B3182442C03E86 /* Pods-HelloVideoCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloVideoCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloVideoCore/Pods-HelloVideoCore.release.xcconfig"; sourceTree = "<group>"; };
+		B720B6805981BE4E3918D160 /* Pods_HelloVideoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloVideoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDF8776ACF551481FC80B49 /* Pods-HelloVideoCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloVideoCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloVideoCore/Pods-HelloVideoCore.debug.xcconfig"; sourceTree = "<group>"; };
+		F5EAC9DC1F41C18500A9CB3E /* HelloVideoCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloVideoCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5EAC9DF1F41C18500A9CB3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5EAC9E11F41C18500A9CB3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5EAC9E41F41C18500A9CB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5EAC9E61F41C18500A9CB3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5EAC9E91F41C18500A9CB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5EAC9EB1F41C18500A9CB3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5EAC9D91F41C18500A9CB3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E821B0832F998851A10B5FA3 /* Pods_HelloVideoCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2CD84147FC5F41E71D558C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B720B6805981BE4E3918D160 /* Pods_HelloVideoCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4446E6B42E269A3041D88BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEDF8776ACF551481FC80B49 /* Pods-HelloVideoCore.debug.xcconfig */,
+				12693162E6B3182442C03E86 /* Pods-HelloVideoCore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5EAC9D31F41C18500A9CB3E = {
+			isa = PBXGroup;
+			children = (
+				F5EAC9DE1F41C18500A9CB3E /* HelloVideoCore */,
+				F5EAC9DD1F41C18500A9CB3E /* Products */,
+				D4446E6B42E269A3041D88BE /* Pods */,
+				A2CD84147FC5F41E71D558C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5EAC9DD1F41C18500A9CB3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAC9DC1F41C18500A9CB3E /* HelloVideoCore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5EAC9DE1F41C18500A9CB3E /* HelloVideoCore */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAC9DF1F41C18500A9CB3E /* AppDelegate.swift */,
+				F5EAC9E11F41C18500A9CB3E /* ViewController.swift */,
+				F5EAC9E31F41C18500A9CB3E /* Main.storyboard */,
+				F5EAC9E61F41C18500A9CB3E /* Assets.xcassets */,
+				F5EAC9E81F41C18500A9CB3E /* LaunchScreen.storyboard */,
+				F5EAC9EB1F41C18500A9CB3E /* Info.plist */,
+			);
+			path = HelloVideoCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5EAC9DB1F41C18500A9CB3E /* HelloVideoCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5EAC9EE1F41C18500A9CB3E /* Build configuration list for PBXNativeTarget "HelloVideoCore" */;
+			buildPhases = (
+				7F279329C29ECD5528FB69B4 /* [CP] Check Pods Manifest.lock */,
+				F5EAC9D81F41C18500A9CB3E /* Sources */,
+				F5EAC9D91F41C18500A9CB3E /* Frameworks */,
+				F5EAC9DA1F41C18500A9CB3E /* Resources */,
+				ADB49A4AABD47FDB14F64E47 /* [CP] Embed Pods Frameworks */,
+				6E9490A0E076EEC4EE108DFB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloVideoCore;
+			productName = HelloVideoCore;
+			productReference = F5EAC9DC1F41C18500A9CB3E /* HelloVideoCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5EAC9D41F41C18500A9CB3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Firekast;
+				TargetAttributes = {
+					F5EAC9DB1F41C18500A9CB3E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AW8HXS3KFS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F5EAC9D71F41C18500A9CB3E /* Build configuration list for PBXProject "HelloVideoCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5EAC9D31F41C18500A9CB3E;
+			productRefGroup = F5EAC9DD1F41C18500A9CB3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5EAC9DB1F41C18500A9CB3E /* HelloVideoCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5EAC9DA1F41C18500A9CB3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5EAC9EA1F41C18500A9CB3E /* LaunchScreen.storyboard in Resources */,
+				F5EAC9E71F41C18500A9CB3E /* Assets.xcassets in Resources */,
+				F5EAC9E51F41C18500A9CB3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E9490A0E076EEC4EE108DFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloVideoCore/Pods-HelloVideoCore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F279329C29ECD5528FB69B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB49A4AABD47FDB14F64E47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloVideoCore/Pods-HelloVideoCore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5EAC9D81F41C18500A9CB3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5EAC9E21F41C18500A9CB3E /* ViewController.swift in Sources */,
+				F5EAC9E01F41C18500A9CB3E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5EAC9E31F41C18500A9CB3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5EAC9E41F41C18500A9CB3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5EAC9E81F41C18500A9CB3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5EAC9E91F41C18500A9CB3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5EAC9EC1F41C18500A9CB3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5EAC9ED1F41C18500A9CB3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5EAC9EF1F41C18500A9CB3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEDF8776ACF551481FC80B49 /* Pods-HelloVideoCore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				INFOPLIST_FILE = HelloVideoCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.firekast.HelloVideoCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F5EAC9F01F41C18500A9CB3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12693162E6B3182442C03E86 /* Pods-HelloVideoCore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				INFOPLIST_FILE = HelloVideoCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.firekast.HelloVideoCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5EAC9D71F41C18500A9CB3E /* Build configuration list for PBXProject "HelloVideoCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5EAC9EC1F41C18500A9CB3E /* Debug */,
+				F5EAC9ED1F41C18500A9CB3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5EAC9EE1F41C18500A9CB3E /* Build configuration list for PBXNativeTarget "HelloVideoCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5EAC9EF1F41C18500A9CB3E /* Debug */,
+				F5EAC9F01F41C18500A9CB3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5EAC9D41F41C18500A9CB3E /* Project object */;
+}
