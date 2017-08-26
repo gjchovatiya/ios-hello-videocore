@@ -99,12 +99,12 @@ class ViewController: UIViewController, VCSessionDelegate {
     @IBOutlet weak var cameraContainer: UIView!
     
     var session:VCSimpleSession!
-    let width = 1280
-    let height = 720
+    let videoResolution = CGSize(width: 1280, height: 720)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        session  = VCSimpleSession(videoSize: CGSize(width: width, height: height), frameRate: 30, bitrate: 1000000, useInterfaceOrientation: false)
+        session  = VCSimpleSession(videoSize: videoResolution, frameRate: 30, bitrate: 1000000, useInterfaceOrientation: false)
         cameraContainer.addSubview(session.previewView)
         session.previewView.frame = cameraContainer.bounds
         session.delegate = self
@@ -115,7 +115,7 @@ class ViewController: UIViewController, VCSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    public func addImage(_ image: UIImage, inView view: UIView, origin: CGPoint, size: CGSize) {
+    public func addImage(_ image: UIImage, origin: CGPoint, size: CGSize) {
         //let containerSize = view.bounds.size
         let img = image.scaled(to: size, scalingMode: .fill)
         let r = CGRect(x: size.width/2 + origin.x, y: size.height/2 + origin.y, width: size.width, height: size.height)
@@ -124,10 +124,10 @@ class ViewController: UIViewController, VCSessionDelegate {
     
     public func didAddCameraSource(_ session: VCSimpleSession!) {
 //        session.filter = VCFilter.sepia
-        let vcViewSize = CGSize(width: width, height: height)//view.bounds.size
-        let gradientHeight = 0.3 * vcViewSize.height
-        let origin = CGPoint(x: 0, y: vcViewSize.height - gradientHeight)
-        addImage(UIImage(named: "logo")!, inView: view, origin: origin, size: CGSize(width: vcViewSize.width, height: gradientHeight))
+        let gradientHeight = 0.3 * videoResolution.height
+        let origin = CGPoint(x: 0, y: videoResolution.height - gradientHeight)
+        let imageSize = CGSize(width: videoResolution.width, height: gradientHeight)
+        addImage(UIImage(named: "logo")!, origin: origin, size: imageSize)
     }
     
     func connectionStatusChanged(_ sessionState: VCSessionState) {
