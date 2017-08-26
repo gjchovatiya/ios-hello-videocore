@@ -10,23 +10,88 @@ import Foundation
 import UIKit
 import videocore
 
+//extension UIImage {
+//    
+//    func scaleImage(toSize newSize: CGSize) -> UIImage? {
+//        let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
+//        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+//        if let context = UIGraphicsGetCurrentContext() {
+//            context.interpolationQuality = .high
+//            let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
+//            context.concatenate(flipVertical)
+//            context.draw(self.cgImage!, in: newRect)
+//            let newImage = UIImage(cgImage: context.makeImage()!)
+//            UIGraphicsEndImageContext()
+//            return newImage
+//        }
+//        return nil
+//    }
+//    
+//}
+
+// MARK: - Image Scaling.
 extension UIImage {
     
-    func scaleImage(toSize newSize: CGSize) -> UIImage? {
-        let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        if let context = UIGraphicsGetCurrentContext() {
-            context.interpolationQuality = .high
-            let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
-            context.concatenate(flipVertical)
-            context.draw(self.cgImage!, in: newRect)
-            let newImage = UIImage(cgImage: context.makeImage()!)
-            UIGraphicsEndImageContext()
-            return newImage
+    /// Represents a scaling mode
+    enum ScalingMode {
+        case aspectFill
+        case aspectFit
+        case fill
+        
+        /// Calculates the aspect ratio between two sizes
+        ///
+        /// - parameters:
+        ///     - size:      the first size used to calculate the ratio
+        ///     - otherSize: the second size used to calculate the ratio
+        ///
+        /// - return: the aspect ratio between the two sizes
+        func aspectRatio(between size: CGSize, and otherSize: CGSize) -> CGFloat {
+            let aspectWidth  = size.width/otherSize.width
+            let aspectHeight = size.height/otherSize.height
+            
+            switch self {
+            case .fill:
+                return 1
+            case .aspectFill:
+                return max(aspectWidth, aspectHeight)
+            case .aspectFit:
+                return min(aspectWidth, aspectHeight)
+            }
         }
-        return nil
     }
     
+    /// Scales an image to fit within a bounds with a size governed by the passed size. Also keeps the aspect ratio.
+    ///
+    /// - parameter:
+    ///     - newSize:     the size of the bounds the image must fit within.
+    ///     - scalingMode: the desired scaling mode
+    ///
+    /// - returns: a new scaled image.
+    func scaled(to newSize: CGSize, scalingMode: UIImage.ScalingMode = .aspectFill) -> UIImage {
+        
+        /* Build the rectangle representing the area to be drawn */
+        var scaledImageRect: CGRect
+        if scalingMode == .fill {
+            scaledImageRect = CGRect(origin: CGPoint.zero, size: newSize)
+        } else {
+            let aspectRatio = scalingMode.aspectRatio(between: newSize, and: size)
+            scaledImageRect = CGRect.zero
+            scaledImageRect.size.width  = size.width * aspectRatio
+            scaledImageRect.size.height = size.height * aspectRatio
+            scaledImageRect.origin.x    = (newSize.width - size.width * aspectRatio) / 2.0
+            scaledImageRect.origin.y    = (newSize.height - size.height * aspectRatio) / 2.0
+        }
+        
+        /* Draw and retrieve the scaled image */
+        UIGraphicsBeginImageContext(newSize)
+        
+        draw(in: scaledImageRect)
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return scaledImage!
+    }
 }
 
 class ViewController: UIViewController, VCSessionDelegate {
@@ -52,9 +117,7 @@ class ViewController: UIViewController, VCSessionDelegate {
 
     public func addImage(_ image: UIImage, inView view: UIView, origin: CGPoint, size: CGSize) {
         //let containerSize = view.bounds.size
-        guard let img = image.scaleImage(toSize: size) else {
-            return
-        }
+        let img = image.scaled(to: size, scalingMode: .fill)
         let r = CGRect(x: size.width/2 + origin.x, y: size.height/2 + origin.y, width: size.width, height: size.height)
         session.addPixelBufferSource(img, with: r)
     }
