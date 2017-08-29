@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,26 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-fB-NmB" userLabel="Camera">
-                                <rect key="frame" x="16" y="28" width="343" height="238"/>
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Sh7-fB-NmB" secondAttribute="height" multiplier="49:34" id="uth-gX-VlB"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOX-gd-tlP">
-                                <rect key="frame" x="16" y="267" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="VKO-a4-VCw"/>
-                                    <constraint firstAttribute="height" constant="128" id="aB7-Qo-GkW"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.1176470588" blue="0.17254901959999999" alpha="0.75" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Sh7-fB-NmB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KQr-gP-f1s"/>
-                            <constraint firstItem="VOX-gd-tlP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="247" id="PAh-80-zQD"/>
-                            <constraint firstItem="VOX-gd-tlP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wf3-AX-lqk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sh7-fB-NmB" secondAttribute="bottom" constant="20" id="mYa-oJ-wMr"/>
                             <constraint firstItem="Sh7-fB-NmB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ryL-IF-VVo"/>
                             <constraint firstItem="Sh7-fB-NmB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sNQ-rT-AAb"/>
                         </constraints>
